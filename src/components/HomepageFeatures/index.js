@@ -1,48 +1,66 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import ThemedImage from '@theme/ThemedImage';
+
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Ecosystem',
+    Svg: ThemedImage,
+    sources: {
+      light: 'https://mnstrd.co/wiki/ecosystem.svg',
+      dark: 'https://mnstrd.co/wiki/ecosystem.svg',
+    },
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Our ecosystem & instruments
       </>
     ),
+    url: '/docs/category/ecosystem',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Developers',
+    Svg: ThemedImage,
+    sources: {
+      light: 'https://mnstrd.co/wiki/developers.svg',
+      dark: 'https://mnstrd.co/wiki/developers.svg',
+    },
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       Developers
       </>
     ),
+    url: '/docs/category/developers',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Tokenomics',
+    Svg: ThemedImage,
+    sources: {
+      light: 'https://mnstrd.co/wiki/tokenomics.svg',
+      dark: 'https://mnstrd.co/wiki/tokenomics.svg',
+    },
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Tokenomics
       </>
     ),
+    url: '/docs/category/tokenomics',
   },
+
+
+
+
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, url, sources}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <a href={url}><Svg className={styles.featureSvg} alt={title} sources={sources} /></a>
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <h3><a href={url}>{title}</a></h3>
         <p>{description}</p>
       </div>
     </div>
