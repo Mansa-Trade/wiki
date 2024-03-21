@@ -28,7 +28,7 @@ sidebar_position: 30
 
 
 ### Q3/Q4 2024
-- Increase liquidity to $100,000 and increase holders
+- Increase liquidity in the range og $100,000 - $500,000 and increase holders
 - Update CoinGecko
 - Re-strategize P2P D’app and increase daily users
 - Onboard existing project to D’app and app via partnerships
